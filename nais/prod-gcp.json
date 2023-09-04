@@ -1,0 +1,6 @@
+{
+  "namespace": "dusseldorf",
+  "team": "dusseldorf",
+  "app": "k9-innsyn-dine-pleiepenger-mikrofrontend",
+  "ingresses": ["https://www.nav.no/k9-innsyn-dine-pleiepenger-mikrofrontend"]
+}

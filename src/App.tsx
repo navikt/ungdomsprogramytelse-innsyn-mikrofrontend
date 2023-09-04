@@ -10,7 +10,7 @@ function App() {
 
   return (
     <section>
-      <Komponent emoji={data?.emoji} tekst={useTranslate("microfrontendTitle")} />
+      <Komponent undertittel={useTranslate("microfrontendSubtitle")} tittel={useTranslate("microfrontendTitle")} />
     </section>
   );
 }

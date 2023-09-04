@@ -7,9 +7,14 @@ type Text = {
 
 const text: Text = {
   microfrontendTitle: {
-    nb: "Dette kommer til å bli en awesome mikrofrontend!",
-    nn: "Dette kjem til å bli ein awesome mikrofrontend!",
-    en: "This is going to be an amazing microfrontend!",
+    nb: "Dine pleiepenger",
+    nn: "Dine pleiepenger",
+    en: "Your nursing allowance",
+  },
+  microfrontendSubtitle: {
+    nb: "Naviger til dine pleiepenger",
+    nn: "Naviger til dine pleiepenger",
+    en: "Navigate to your nursing allowance",
   },
 };
 

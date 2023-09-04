@@ -5,7 +5,7 @@ import Komponent from "./Komponent";
 
 describe("Simple working test for Komponent", () => {
   it("has a text", () => {
-    render(<Komponent emoji="" tekst="tekst" />);
+    render(<Komponent undertittel="" tittel="tekst" />);
     expect(screen.getByText(/tekst/)).toBeDefined();
   });
 });

@@ -1,19 +1,19 @@
 import React from "react";
-import { Panel } from "@navikt/ds-react";
+import { BodyLong, Heading, LinkPanel } from "@navikt/ds-react";
 import "./Komponent.css";
 
 interface Props {
-  tekst: string;
-  emoji: string;
+  tittel: string;
+  undertittel: string;
 }
 
-const Komponent = ({ tekst, emoji }: Props) => {
+const Komponent = ({ tittel, undertittel }: Props) => {
   return (
     <div className="komponent">
-      <Panel border>
-        <p>{tekst}</p>
-        <p>{emoji}</p>
-      </Panel>
+      <LinkPanel border href="https://sif-innsyn.intern.dev.nav.no/familie/sykdom-i-familien/soknad/innsyn/">
+        <LinkPanel.Title>{tittel}</LinkPanel.Title>
+        <LinkPanel.Description>{undertittel}</LinkPanel.Description>
+      </LinkPanel>
     </div>
   );
 };
