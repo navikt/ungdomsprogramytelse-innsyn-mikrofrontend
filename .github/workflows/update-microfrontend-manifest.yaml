@@ -1,0 +1,24 @@
+name: Update microfrontend-manifest
+on:
+  push:
+    branches:
+      - "main"
+      - "dev-*"
+
+jobs:
+  update-manifest-dev-gcp:
+    uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main
+    with:
+      cluster: dev-gcp
+      id: "pleiepenger-innsyn"
+      url: "https://cdn.nav.no/frontend-plattform-prod-dusseldorf/dusseldorf/k9-innsyn-dine-pleiepenger-mikrofrontend/dist/manifest.json"
+    secrets: inherit
+
+  update-manifest-prod-gcp:
+    if: github.ref == 'refs/heads/main'
+    uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main
+    with:
+      cluster: prod-gcp
+      id: "pleiepenger-innsyn"
+      url: "https://cdn.nav.no/frontend-plattform-prod-dusseldorf/dusseldorf/k9-innsyn-dine-pleiepenger-mikrofrontend/dist/manifest.json"
+    secrets: inherit
