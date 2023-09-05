@@ -1,5 +1,5 @@
 import React from "react";
-import { BodyLong, Heading, LinkPanel } from "@navikt/ds-react";
+import { LinkPanel } from "@navikt/ds-react";
 import "./Komponent.css";
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 const Komponent = ({ tittel, undertittel }: Props) => {
   return (
     <div className="komponent">
-      <LinkPanel border href="https://sif-innsyn.intern.dev.nav.no/familie/sykdom-i-familien/soknad/innsyn/">
+      <LinkPanel border href={import.meta.env.VITE_INNSYN_DINE_PLEIEPENGER_URL}>
         <LinkPanel.Title>{tittel}</LinkPanel.Title>
         <LinkPanel.Description>{undertittel}</LinkPanel.Description>
       </LinkPanel>

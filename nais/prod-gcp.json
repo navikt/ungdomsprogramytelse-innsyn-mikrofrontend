@@ -2,5 +2,8 @@
   "namespace": "dusseldorf",
   "team": "dusseldorf",
   "app": "k9-innsyn-dine-pleiepenger-mikrofrontend",
-  "ingresses": ["https://www.nav.no/k9-innsyn-dine-pleiepenger-mikrofrontend"]
+  "ingresses": ["https://www.nav.no/k9-innsyn-dine-pleiepenger-mikrofrontend"],
+  "env": {
+    "VITE_INNSYN_DINE_PLEIEPENGER_URL": "https://www.nav.no/familie/sykdom-i-familien/soknad/innsyn"
+  }
 }
