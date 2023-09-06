@@ -3,6 +3,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    node: true,
   },
   parser: "@typescript-eslint/parser",
   ignorePatterns: [".eslintrc.*", "**/dist/*.js", "vite.config.ts", "/server/server.js", "plugin:react/recommended"],
