@@ -16,6 +16,9 @@ jobs:
       id-token: "write"
       packages: "write"
 
+    outputs:
+      upload_url: ${{ steps.extract-manifest-url.outputs.upload_url }}
+
     steps:
       - uses: "actions/checkout@v3"
       - uses: "actions/setup-node@v3"
@@ -30,12 +33,19 @@ jobs:
       - name: "Build application"
         run: "npm run build"
 
-      - name: cdn-upload
+      - id: cdn-upload
         uses: navikt/frontend/actions/cdn-upload/v1@main
         with:
           cdn-team-name: dusseldorf
           source: ./dist/
           destination: "k9-innsyn-dine-pleiepenger-mikrofrontend"
+
+      - name: Extract manifest url
+        id: extract-manifest-url
+        run: |
+          files="${{ steps.cdn-upload.outputs.uploaded }}"
+          first_file=$(echo $files | cut -d',' -f1)
+          echo "upload_url=https://cdn.nav.no/$first_file" >> $GITHUB_OUTPUT
 
       - name: "Build and publish Docker image"
         run: "docker build --pull --tag ${IMAGE} . && echo $GITHUB_TOKEN | docker login\
@@ -43,6 +53,25 @@ jobs:
           \ && docker push ${IMAGE}"
         env:
           "GITHUB_TOKEN": "${{ secrets.GITHUB_TOKEN }}"
+
+  update-manifest-dev-gcp:
+    uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main
+    needs: build
+    with:
+      cluster: dev-gcp
+      id: "pleiepenger-innsyn"
+      url: ${{needs.build.outputs.upload_url}}
+    secrets: inherit
+
+  update-manifest-prod-gcp:
+    if: github.ref == 'refs/heads/main'
+    uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main
+    needs: build
+    with:
+      cluster: prod-gcp
+      id: "pleiepenger-innsyn"
+      url: ${{needs.build.outputs.upload_url}}
+    secrets: inherit
 
   deploy-dev:
     runs-on: "ubuntu-latest"
