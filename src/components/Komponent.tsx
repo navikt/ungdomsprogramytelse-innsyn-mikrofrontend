@@ -2,6 +2,7 @@ import React from "react";
 import { LinkPanel } from "@navikt/ds-react";
 import "./Komponent.css";
 import { PersonTallShortIcon } from "@navikt/aksel-icons";
+import { innsynDinePleiepengerUrl } from "../api/urls";
 
 interface Props {
   tittel: string;
@@ -11,7 +12,7 @@ interface Props {
 const Komponent = ({ tittel, undertittel }: Props) => {
   return (
     <div className="komponent">
-      <LinkPanel border href={import.meta.env.VITE_INNSYN_DINE_PLEIEPENGER_URL}>
+      <LinkPanel border href={innsynDinePleiepengerUrl}>
         <LinkPanel.Title>
           <div className="flex items-center space-x-4">
             <div className="text-6xl flex-shrink-0 grid place-content-center">

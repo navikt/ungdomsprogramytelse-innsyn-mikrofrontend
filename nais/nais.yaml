@@ -28,9 +28,4 @@ spec:
     requests:
       cpu: "500m"
       memory: 512Mi
-  env:
-  {{#each env}}
-    - name: {{@key}}
-      value: "{{this}}"
-  {{/each}}
 
