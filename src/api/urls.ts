@@ -1,21 +1,21 @@
-const isProduction = window.location.href.includes("www.nav.no");
-const isDevelopment = window.location.href.includes("www.intern.dev.nav.no");
+const currentUrl = window.location.href;
 
-export const getEnvironment = () => {
-  if (isProduction) {
-    return "production";
+type Environment = "production" | "development" | "local";
+
+const ENVIRONMENTS: Record<Environment, string> = {
+  production: "www.nav.no",
+  development: "www.intern.dev.nav.no",
+  local: "", // This can be an empty string since we default to "local" if none match
+};
+
+export const getEnvironment = (): Environment => {
+  for (const [env, url] of Object.entries(ENVIRONMENTS)) {
+    if (currentUrl.includes(url)) return env as Environment;
   }
-
-  if (isDevelopment) {
-    return "development";
-  }
-
   return "local";
 };
 
-type EnvUrl = { development: string; production: string; local: string };
-
-const INNSYN_DINE_PLEIEPENGER_URL: EnvUrl = {
+const INNSYN_DINE_PLEIEPENGER_URL: Record<Environment, string> = {
   local: "https://sif-innsyn.intern.dev.nav.no/familie/sykdom-i-familien/soknad/innsyn",
   development: "https://sif-innsyn.intern.dev.nav.no/familie/sykdom-i-familien/soknad/innsyn",
   production: "https://www.nav.no/familie/sykdom-i-familien/soknad/innsyn",
