@@ -10,7 +10,7 @@ interface IconProps {
 const PleiepengerIcon: React.FC<IconProps> = () => (
   <svg width="56" height="54" viewBox="0 0 56 54" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clipPath="url(#clip0_1_1001)">
-      <rect x="12.8333" y="10.8333" width="30.3333" height="30.3333" rx="15.1667" fill="#CCF1D6" />
+      <rect x="12.8333" y="10.8333" width="30.3333" height="30.3333" rx="15.1667" fill="#CCE2F0" />
       <path d="M53.6667 28.6667V3.33337H37.6667V28.6667" stroke="#23262A" strokeWidth="2" />
       <path d="M37.6667 12.6666H29.6667V28.6666" stroke="#23262A" strokeWidth="2" />
       <path d="M43 10L48.3333 10" stroke="#23262A" strokeWidth="2" />
