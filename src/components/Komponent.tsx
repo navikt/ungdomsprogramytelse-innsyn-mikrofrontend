@@ -1,8 +1,9 @@
 import React from "react";
 import { BodyLong, Heading } from "@navikt/ds-react";
-import { ChevronRightIcon, PersonTallShortIcon } from "@navikt/aksel-icons";
+import { ChevronRightIcon } from "@navikt/aksel-icons";
 import { innsynDinePleiepengerUrl } from "../api/urls";
 import styles from "./Komponent.module.css";
+import PleiepengerIcon from "../icons/PleiepengerIcon";
 
 interface Props {
   tittel: string;
@@ -14,7 +15,7 @@ const Komponent = ({ tittel, undertittel }: Props) => {
     <a className={styles.container} href={innsynDinePleiepengerUrl}>
       <div className={styles.ikonOgTekstContainer}>
         <div aria-hidden>
-          <PersonTallShortIcon title="a11y-title" fontSize="3rem" />
+          <PleiepengerIcon />
         </div>
         <div>
           <Heading size="small" level="2">
