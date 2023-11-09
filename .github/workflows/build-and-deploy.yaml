@@ -4,8 +4,7 @@ on:
     branches:
       - "main"
       - "dev-*"
-env:
-  "IMAGE": "ghcr.io/${{ github.repository }}/k9-innsyn-dine-pleiepenger-mikrofrontend:${{ github.sha }}"
+
 jobs:
   build:
     name: "build"
@@ -46,13 +45,6 @@ jobs:
           files="${{ steps.cdn-upload.outputs.uploaded }}"
           first_file=$(echo $files | cut -d',' -f1)
           echo "upload_url=https://cdn.nav.no/$first_file" >> $GITHUB_OUTPUT
-
-      - name: "Build and publish Docker image"
-        run: "docker build --pull --tag ${IMAGE} . && echo $GITHUB_TOKEN | docker login\
-          \ --username $GITHUB_REPOSITORY --password-stdin https://ghcr.io\
-          \ && docker push ${IMAGE}"
-        env:
-          "GITHUB_TOKEN": "${{ secrets.GITHUB_TOKEN }}"
 
   update-manifest-dev-gcp:
     uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main
