@@ -1,10 +1,9 @@
-import React from "react";
-import { BodyLong, Heading } from "@navikt/ds-react";
 import { ChevronRightIcon } from "@navikt/aksel-icons";
+import { BodyLong, Heading } from "@navikt/ds-react";
 import { innsynDinePleiepengerUrl } from "../api/urls";
-import styles from "./Komponent.module.css";
 import PleiepengerIcon from "../icons/PleiepengerIcon";
 import { logNavigereEvent } from "../utils/amplitude";
+import styles from "./Komponent.module.css";
 
 interface Props {
   tittel: string;
@@ -25,7 +24,7 @@ const Komponent = ({ tittel, undertittel }: Props) => {
           <BodyLong size="medium">{undertittel}</BodyLong>
         </div>
       </div>
-      <ChevronRightIcon className={styles.chevron} aria-hidden fontSize="24px" />
+      <ChevronRightIcon className={styles.chevron} aria-hidden fontSize="1.5rem" />
     </a>
   );
 };
