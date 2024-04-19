@@ -12,6 +12,6 @@ if (container) {
       <main>
         <Mikrofrontend />
       </main>
-    </React.StrictMode>
+    </React.StrictMode>,
   );
 }
