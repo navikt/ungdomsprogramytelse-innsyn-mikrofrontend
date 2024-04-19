@@ -31,7 +31,11 @@ export default () => ({
     globals: true,
     environment: "jsdom",
     deps: {
-      inline: ["@testing-library/user-event"],
+      optimizer: {
+        web: {
+          include: ["@testing-library/user-event"],
+        },
+      },
     },
   },
 });
