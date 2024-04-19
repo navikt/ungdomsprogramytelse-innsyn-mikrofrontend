@@ -8,9 +8,11 @@ const ENVIRONMENTS: Record<Environment, string> = {
   local: "", // This can be an empty string since we default to "local" if none match
 };
 
-export const getEnvironment = (): Environment => {
+const getEnvironment = (): Environment => {
   for (const [env, url] of Object.entries(ENVIRONMENTS)) {
-    if (currentUrl.includes(url)) return env as Environment;
+    if (currentUrl.includes(url)) {
+      return env as Environment;
+    }
   }
   return "local";
 };
