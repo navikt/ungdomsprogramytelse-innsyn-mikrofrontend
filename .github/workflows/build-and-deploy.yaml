@@ -53,7 +53,7 @@ jobs:
       cluster: dev-gcp
       id: "pleiepenger-innsyn"
       url: ${{needs.build.outputs.upload_url}}
-      commitmsg: ${{ github.event.head_commit.message}}
+      commitmsg: ${{github.event.head_commit.message}}
     secrets: inherit
 
   update-manifest-prod-gcp:
