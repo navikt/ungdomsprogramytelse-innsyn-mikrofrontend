@@ -17,7 +17,6 @@ export default () => ({
     },
   ],
   build: {
-    manifest: true,
     rollupOptions: {
       input: resolve(__dirname, "src/Mikrofrontend.tsx"),
       preserveEntrySignatures: "exports-only",
