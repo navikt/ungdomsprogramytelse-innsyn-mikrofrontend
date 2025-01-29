@@ -12,11 +12,11 @@
     "pretty-quick": "pretty-quick --pattern \"**/*.*(ts|tsx)\""
   },
   "dependencies": {
-    "@amplitude/analytics-browser": "^2.11.0",
     "@navikt/aksel-icons": "^6.16.0",
     "@navikt/ds-css": "^6.16.0",
     "@navikt/ds-react": "^6.16.0",
     "@navikt/ds-tokens": "^6.6.0",
+    "@navikt/nav-dekoratoren-moduler": "2.1.6",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.41",
     "postcss-import": "^16.1.0",

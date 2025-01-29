@@ -1,15 +1,11 @@
-import { init, track } from "@amplitude/analytics-browser";
-
-export const initAmplitude = () => {
-  init("default", undefined, {
-    useBatch: true,
-    serverUrl: "https://amplitude.nav.no/collect-auto",
-    ingestionMetadata: {
-      sourceName: window.location.toString(),
-    },
-  });
-};
+import { logAmplitudeEvent } from "@navikt/nav-dekoratoren-moduler";
 
 export const logNavigereEvent = () => {
-  track("navigere", { komponent: "k9-innsyn-dine-pleiepenger-mikrofrontend" });
+  logAmplitudeEvent({
+    origin: "k9-innsyn-dine-pleiepenger-mikrofrontend",
+    eventName: "navigere",
+    eventData: {
+      komponent: "k9-innsyn-dine-pleiepenger-mikrofrontend",
+    },
+  });
 };
