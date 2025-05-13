@@ -18,8 +18,8 @@ const getEnvironment = (): Environment => {
 };
 
 const INNSYN_DINE_PLEIEPENGER_URL: Record<Environment, string> = {
-  local: "https://sif-innsyn.intern.dev.nav.no/familie/sykdom-i-familien/soknad/innsyn",
-  development: "https://sif-innsyn.intern.dev.nav.no/familie/sykdom-i-familien/soknad/innsyn",
+  local: "https://dine-pleiepenger.intern.dev.nav.no/familie/sykdom-i-familien/soknad/innsyn",
+  development: "https://dine-pleiepenger.intern.dev.nav.no/familie/sykdom-i-familien/soknad/innsyn",
   production: "https://www.nav.no/familie/sykdom-i-familien/soknad/innsyn",
 };
 
