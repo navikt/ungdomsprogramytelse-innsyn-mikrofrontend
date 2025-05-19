@@ -17,10 +17,10 @@ const getEnvironment = (): Environment => {
   return "local";
 };
 
-const INNSYN_DINE_PLEIEPENGER_URL: Record<Environment, string> = {
-  local: "https://dine-pleiepenger.intern.dev.nav.no/familie/sykdom-i-familien/soknad/innsyn",
-  development: "https://dine-pleiepenger.intern.dev.nav.no/familie/sykdom-i-familien/soknad/innsyn",
-  production: "https://www.nav.no/familie/sykdom-i-familien/soknad/innsyn",
+const INNSYN_UNGDOMSYTELSE_DELTAKER_URL: Record<Environment, string> = {
+  local: "https://ungdomsytelse-deltaker.intern.dev.nav.no/ungdomsytelse-deltaker",
+  development: "https://ungdomsytelse-deltaker.intern.dev.nav.no/ungdomsytelse-deltaker",
+  production: "https://www.nav.no/ungdomsytelse-deltaker", // TODO: Avlar dette før prod.
 };
 
-export const innsynDinePleiepengerUrl = INNSYN_DINE_PLEIEPENGER_URL[getEnvironment()];
+export const innsynUngdomsytelsedDltakerUrl = INNSYN_UNGDOMSYTELSE_DELTAKER_URL[getEnvironment()];

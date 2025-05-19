@@ -3,14 +3,14 @@ import { LanguageContext } from "./LanguageProvider";
 
 const text = {
   overskrift: {
-    nb: "Dine pleiepenger",
-    nn: "Dine pleiepenger",
-    en: "Your nursing allowance",
+    nb: "Din ungdomsytelse",
+    nn: "Din ungdomsytelse",
+    en: "Your youth allowance",
   },
   underoverskrift: {
-    nb: "Naviger til dine pleiepenger",
-    nn: "Naviger til dine pleiepenger",
-    en: "Navigate to your nursing allowance",
+    nb: "Naviger til din ungdomsytelse",
+    nn: "Naviger til din ungdomsytelse",
+    en: "Navigate to your youth allowance",
   },
 };
 

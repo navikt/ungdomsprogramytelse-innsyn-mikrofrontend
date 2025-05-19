@@ -1,6 +1,6 @@
 import { ChevronRightIcon } from "@navikt/aksel-icons";
 import { BodyLong, Heading } from "@navikt/ds-react";
-import { innsynDinePleiepengerUrl } from "../api/urls";
+import { innsynUngdomsytelsedDltakerUrl } from "../api/urls";
 import PleiepengerIcon from "../icons/PleiepengerIcon";
 import { logNavigereEvent } from "../utils/amplitude";
 import styles from "./Komponent.module.css";
@@ -12,7 +12,7 @@ interface Props {
 
 const Komponent = ({ tittel, undertittel }: Props) => {
   return (
-    <a className={styles.container} href={innsynDinePleiepengerUrl} onClick={logNavigereEvent}>
+    <a className={styles.container} href={innsynUngdomsytelsedDltakerUrl} onClick={logNavigereEvent}>
       <div className={styles.ikonOgTekstContainer}>
         <div aria-hidden>
           <PleiepengerIcon />
