@@ -1,4 +1,4 @@
-name: "Test build"
+name: Test build
 
 jobs:
   test-build:
