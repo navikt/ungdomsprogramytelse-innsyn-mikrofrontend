@@ -3,14 +3,14 @@ import { LanguageContext } from "./LanguageProvider";
 
 const text = {
   overskrift: {
-    nb: "Din ungdomsytelse",
-    nn: "Din ungdomsytelse",
-    en: "Your youth allowance",
+    nb: "Ungdomsprogrammet",
+    nn: "Ungdomsprogrammet",
+    en: "Youth Program",
   },
   underoverskrift: {
-    nb: "Naviger til din ungdomsytelse",
-    nn: "Naviger til din ungdomsytelse",
-    en: "Navigate to your youth allowance",
+    nb: "Oversikt over saken din",
+    nn: "Oversikt over saka di",
+    en: "Overview of your case",
   },
 };
 
