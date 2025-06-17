@@ -3,8 +3,8 @@ import { LanguageContext } from "./LanguageProvider";
 
 const text = {
   overskrift: {
-    nb: "Ungdomsprogrammet",
-    nn: "Ungdomsprogrammet",
+    nb: "Ungdomsprogramytelsen",
+    nn: "Ungdomsprogramytelsen",
     en: "Youth Program",
   },
   underoverskrift: {
