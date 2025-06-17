@@ -1,7 +1,7 @@
 import { ChevronRightIcon } from "@navikt/aksel-icons";
 import { BodyLong, Heading } from "@navikt/ds-react";
 import { innsynUngdomsytelsedDltakerUrl } from "../api/urls";
-import PleiepengerIcon from "../icons/PleiepengerIcon";
+import UngdomsprogrammetIcon from "../icons/UngdomsprogrammetIcon";
 import { logNavigereEvent } from "../utils/amplitude";
 import styles from "./Komponent.module.css";
 
@@ -15,7 +15,7 @@ const Komponent = ({ tittel, undertittel }: Props) => {
     <a className={styles.container} href={innsynUngdomsytelsedDltakerUrl} onClick={logNavigereEvent}>
       <div className={styles.ikonOgTekstContainer}>
         <div aria-hidden>
-          <PleiepengerIcon />
+          <UngdomsprogrammetIcon />
         </div>
         <div>
           <Heading size="small" level="2">
