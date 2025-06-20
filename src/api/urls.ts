@@ -23,4 +23,4 @@ const INNSYN_UNGDOMSYTELSE_DELTAKER_URL: Record<Environment, string> = {
   production: "https://www.nav.no/ungdomsprogrammet/ytelsen",
 };
 
-export const innsynUngdomsytelsedDltakerUrl = INNSYN_UNGDOMSYTELSE_DELTAKER_URL[getEnvironment()];
+export const innsynUngdomsytelsedDeltakerUrl = INNSYN_UNGDOMSYTELSE_DELTAKER_URL[getEnvironment()];
