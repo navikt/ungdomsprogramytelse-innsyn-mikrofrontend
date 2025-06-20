@@ -18,9 +18,9 @@ const getEnvironment = (): Environment => {
 };
 
 const INNSYN_UNGDOMSYTELSE_DELTAKER_URL: Record<Environment, string> = {
-  local: "https://ungdomsytelse-deltaker.intern.dev.nav.no/ungdomsytelse-deltaker",
-  development: "https://ungdomsytelse-deltaker.intern.dev.nav.no/ungdomsytelse-deltaker",
-  production: "https://www.nav.no/ungdomsytelse-deltaker", // TODO: Avlar dette før prod.
+  local: "https://ungdomsytelse-deltaker.intern.dev.nav.no/ungdomsprogrammet/ytelsen",
+  development: "https://ungdomsytelse-deltaker.intern.dev.nav.no/ungdomsprogrammet/ytelsen",
+  production: "https://www.nav.no/ungdomsprogrammet/ytelsen",
 };
 
-export const innsynUngdomsytelsedDltakerUrl = INNSYN_UNGDOMSYTELSE_DELTAKER_URL[getEnvironment()];
+export const innsynUngdomsytelsedDeltakerUrl = INNSYN_UNGDOMSYTELSE_DELTAKER_URL[getEnvironment()];
